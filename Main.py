@@ -9,9 +9,8 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 
 def getValues():
-    playlist_url = "https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev"
+    playlist_url = "https://www.youtube.com/playlist?list=PLNrotoZZ8BaoXT_LJuwEyESQlctWNDCwD"
     driver.get(playlist_url)
-
     try:
         elements = driver.find_elements(By.CSS_SELECTOR, "a#video-title")
         video_list = []
@@ -28,7 +27,7 @@ def getValues():
     return video_list
 
 video_list = getValues()
-
+print(video_list)
 
 destination_folder_directory = "/Users/sanjaykumar/Downloads/testMusic"
 
